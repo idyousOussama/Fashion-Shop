@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="@color/transparont"
+
+    >
+<RelativeLayout
+    android:layout_width="380dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_input_text_backround_res"
+    android:paddingEnd="15dp"
+android:layout_centerInParent="true"
+    >
+    <ImageView
+        android:id="@+id/search_item_Img"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+android:background="@drawable/white_input_text_backround_res"
+        />
+    <TextView
+        android:id="@+id/search_item_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/zen_old_mincho"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/search_item_Img"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/search_item_Price"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/zen_old_mincho"
+android:drawablePadding="3dp"
+        android:drawableRight="@drawable/dollar"
+        android:maxLines="1"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/likesnum_item_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/search_item_Price"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:autoSizeTextType="uniform"
+        android:drawableLeft="@drawable/productheart"
+        android:gravity="center"
+        android:drawablePadding="2dp"
+        android:maxLines="1"
+        android:fontFamily="@font/zen_old_mincho"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

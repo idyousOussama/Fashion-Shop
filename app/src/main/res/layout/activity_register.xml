@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/Ivory"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_Activity">
+    <TextView
+        android:id="@+id/register_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:text="Register"
+        android:fontFamily="@font/zen_old_mincho"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_register_pro"
+        android:layout_width="250dip"
+        android:layout_height="250dip"
+        android:src="@drawable/user_male"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/register_text"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/user_register_pro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <RadioButton
+            android:id="@+id/male_radio_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="male"
+            android:fontFamily="@font/zen_old_mincho"
+            />
+
+        <RadioButton
+
+            android:id="@+id/girl_radio_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Girl"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_marginStart="25pt"            />
+    </RadioGroup>
+
+    <EditText
+    android:id="@+id/username"
+    android:layout_width="350dip"
+    android:layout_height="50dp"
+    android:layout_below="@+id/radio_group"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/white_input_text_backround_res"
+    android:hint="User name..."
+        android:fontFamily="@font/zen_old_mincho"
+        android:padding="15dp"
+    android:inputType="text"
+    android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/user_name_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:paddingStart="5dp"
+        android:layout_alignStart="@+id/username"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:textColor="@color/red"
+        android:layout_marginTop="1dp"
+
+        />
+    <EditText
+        android:id="@+id/useremail"
+        android:layout_width="350dip"
+        android:layout_height="50dp"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/white_input_text_backround_res"
+        android:hint="User email..."
+        android:fontFamily="@font/zen_old_mincho"
+        android:padding="15dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/user_email_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/useremail"
+        android:visibility="gone"
+        android:paddingStart="5dp"
+        android:layout_alignStart="@+id/useremail"
+        android:textSize="12sp"
+        android:textColor="@color/red"
+        android:layout_marginTop="1dp"
+        />
+    <EditText
+        android:id="@+id/user_password"
+        android:layout_width="310dip"
+        android:layout_height="50dp"
+        android:layout_below="@+id/useremail"
+android:layout_alignStart="@id/useremail"
+        android:background="@drawable/white_input_text_backround_res"
+        android:hint="password..."
+        android:padding="15dp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:inputType="textPassword"
+        android:layout_marginTop="30dp"/>
+    <ImageView
+        android:id="@+id/show_password"
+        android:layout_below="@+id/useremail"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/useremail"
+        android:layout_alignTop="@id/user_password"
+      android:src="@drawable/close_eyes"/>
+    <TextView
+        android:id="@+id/user_password_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/user_password"
+        android:paddingStart="5dp"
+        android:layout_alignStart="@+id/user_password"        android:textSize="12sp"
+        android:textColor="@color/red"
+        android:layout_marginTop="1dp"
+
+        />
+    <EditText
+        android:id="@+id/user_conPassword"
+        android:layout_width="350dip"
+        android:layout_height="50dp"
+        android:layout_below="@+id/user_password"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/enable_inputes_backround"
+        android:hint="confirm password..."
+        android:padding="15dp"
+        android:enabled="false"
+        android:fontFamily="@font/zen_old_mincho"
+        android:inputType="textPassword"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/user_conPassword_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_conPassword"
+        android:paddingStart="5dp"
+android:layout_alignStart="@+id/user_conPassword"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:textColor="@color/red"
+        android:layout_marginTop="1dp"
+
+        />
+
+    <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="10dp"
+    >
+
+        <RelativeLayout
+            android:id="@+id/register_btn_layout"
+            android:layout_width="233dp"
+            android:layout_height="42dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/disable_btns_backroud"
+            >
+            <TextView
+                android:id="@+id/register_btn"
+                android:layout_width="233dp"
+                android:layout_height="42dp"
+                android:text="@string/register_text"
+                android:fontFamily="@font/zen_old_mincho"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:enabled="false"
+                />
+            >
+            <ProgressBar
+                android:id="@+id/register_progress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/register_btn_layout"
+         android:layout_centerHorizontal="true"
+
+         >
+         <TextView
+             android:id="@+id/have_accoount_text"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/have_account_text"
+             android:fontFamily="@font/zen_old_mincho"
+             android:paddingEnd="10dp"
+             android:textColor="@color/orange"
+             />
+         <TextView
+             android:id="@+id/sign_in_text"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/sign_in_text"
+             android:fontFamily="@font/zen_old_mincho"
+             android:textColor="@color/orange"
+             android:textStyle="bold"
+             />
+     </LinearLayout>
+
+</RelativeLayout>
+
+
+</RelativeLayout>

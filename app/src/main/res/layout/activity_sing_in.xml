@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/Ivory"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SingIn_Activity">
+
+
+
+    <TextView
+        android:id="@+id/signintext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/sign_in_steker"
+        android:layout_width="match_parent"
+        android:layout_height="314dp"
+        android:layout_below="@+id/signintext"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/sign_in_account" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/sign_in_steker"
+        android:layout_marginTop="20dp" >
+        <TextView
+            android:id="@+id/signIn_uesr_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_email_text_res"
+            android:textColor="@color/black"
+            android:layout_alignStart="@+id/signIn_useremail"
+            android:textStyle="bold"
+            android:fontFamily="@font/zen_old_mincho"
+            android:drawableLeft="@drawable/phone"
+            android:gravity="center"
+            android:drawablePadding="10dp"/>
+        <EditText
+            android:id="@+id/signIn_useremail"
+            android:layout_width="350dip"
+            android:layout_height="50dp"
+            android:layout_below="@+id/signIn_uesr_text"
+            android:background="@drawable/white_input_text_backround_res"
+            android:hint="Your email..."
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/signIn_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_password_text_res"
+            android:textColor="@color/black"
+            android:layout_alignStart="@+id/signIn_useremail"
+            android:textStyle="bold"
+            android:fontFamily="@font/zen_old_mincho"
+            android:drawableLeft="@drawable/look"
+            android:layout_below="@+id/signIn_useremail"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:drawablePadding="10dp"/>
+        <ImageView
+            android:id="@+id/sginIn_show_password"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/signIn_useremail"
+            android:layout_alignTop="@id/signIn_user_password"
+            android:src="@drawable/close_eyes"/>
+        <EditText
+            android:id="@+id/signIn_user_password"
+            android:layout_width="310dip"
+            android:layout_height="50dp"
+            android:layout_below="@+id/signIn_password_text"
+android:layout_alignStart="@+id/signIn_password_text"
+            android:background="@drawable/white_input_text_backround_res"
+            android:hint="password..."
+            android:padding="15dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"
+          />
+        <TextView
+            android:id="@+id/forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I forget password ?"
+            android:textColor="@color/brow"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_below="@+id/signIn_user_password"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="50dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        >
+        <RelativeLayout
+            android:id="@+id/singBtn_layout"
+            android:layout_width="233dp"
+            android:layout_height="42dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/disable_btns_backroud"
+            >
+            <ProgressBar
+                android:id="@+id/sginIn_progress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+
+                />
+            <TextView
+                android:id="@+id/signIn_btn"
+                android:layout_width="233dp"
+                android:layout_height="42dp"
+                android:text="@string/signIn_text"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/zen_old_mincho"
+                android:enabled="false"
+                android:textSize="20dp"
+                />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/singBtn_layout"
+            android:layout_centerHorizontal="true"
+
+            >
+            <TextView
+                android:id="@+id/have_accoount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dont_have_account_text"
+                android:fontFamily="@font/zen_old_mincho"
+                android:paddingEnd="10dp"
+                android:textColor="@color/brow"
+                />
+            <TextView
+                android:id="@+id/register_in_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_text"
+                android:fontFamily="@font/zen_old_mincho"
+                android:textColor="@color/brow"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

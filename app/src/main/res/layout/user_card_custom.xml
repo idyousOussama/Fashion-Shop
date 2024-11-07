@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    app:cardCornerRadius="20dp"
+    android:padding="5dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/card_layout"
+        android:layout_width="336dp"
+        android:layout_height="210dp"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:id="@+id/user_card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/user_card_text"
+            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/user_card_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/user_card_text"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/user_male" />
+
+        <TextView
+            android:id="@+id/card_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_card_text"
+            android:layout_alignTop="@+id/user_card_image"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_toRightOf="@+id/user_card_image"
+            android:text="@string/user_name_text_res"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/card_name"
+            android:layout_width="217dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/user_card_text"
+            android:layout_alignTop="@+id/user_card_image"
+            android:layout_toRightOf="@+id/card_name_text"
+            android:autoSizeTextType="uniform"
+            android:paddingStart="5dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:paddingEnd="5dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/card_email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_name"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_toRightOf="@+id/user_card_image"
+            android:text="@string/user_email_text_res"
+            android:textColor="@color/black"
+
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/card_email"
+            android:layout_width="217dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/card_name"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_toRightOf="@+id/card_email_text"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp" android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/card_sex_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_email"
+            android:layout_alignBottom="@id/user_card_image"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_marginBottom="0dp"
+            android:layout_toRightOf="@+id/user_card_image"
+            android:text="@string/user_sex_text_res"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/card_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/card_email"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/card_sex_text"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/user_card_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/brow_btn_backround"
+            android:text="@string/save_text_res" />
+
+        <Button
+            android:id="@+id/user_card_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_marginBottom="7dp"
+            android:layout_toLeftOf="@+id/user_card_save_btn"
+            android:background="@drawable/gray_btns_backround_res"
+            android:text="@string/cancel_text_res" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/successful_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:visibility="gone"
+
+        >
+
+        <ImageView
+            android:id="@+id/successful_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/successflly_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/successful_image"
+            android:layout_centerVertical="true"
+            android:text="@string/account_Created"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

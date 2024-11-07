@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.Store_application"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Search_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Forget_Password_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Support_Messanger"
+            android:exported="false" />
+        <activity
+            android:name=".Buyer_Card_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Add_new_Category"
+            android:exported="false" />
+        <activity
+            android:name=".Add_New_Product_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Add_New_Bunner_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Cards_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Product_Details_Activities"
+            android:exported="false" />
+        <activity
+            android:name=".Splach_Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".SingIn_Activity"
+            android:exported="false" >
+
+        </activity>
+        <activity
+            android:name=".male_profile_layout"
+            android:exported="false" />
+        <activity
+            android:name=".Register_Activity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" >
+
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

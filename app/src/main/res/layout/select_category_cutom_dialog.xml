@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="295dp"
+android:layout_margin="5dp"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_dialog_List"
+            android:layout_width="match_parent"
+            android:layout_height="233dp"
+            />
+        <RelativeLayout
+            android:id="@+id/no_categories_layout"
+            android:layout_width="match_parent"
+            android:layout_height="233dp"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/no_categoy_image"
+                android:layout_width="147dp"
+                android:layout_height="123dp"
+                android:src="@drawable/no_result"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no_category_text"
+                    android:layout_width="wrap_content"
+                    android:text="@string/no_category_result"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/no_categoy_image"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/zen_old_mincho"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"/>
+            <Button
+                android:id="@+id/no_categories_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/disable_btns_backroud"
+                android:text="@string/add_categories_text"
+                android:fontFamily="@font/zen_old_mincho"
+                android:textColor="@color/white"
+                android:layout_below="@+id/no_category_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+android:textSize="15dp"
+                android:padding="10dp"/>
+                    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dialogadd_newCategory_layout"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/disable_btns_backroud"
+
+            >
+            <TextView
+                android:id="@+id/dialogadd_newCategory"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="@string/add_product"
+                android:fontFamily="@font/zen_old_mincho"
+                android:gravity="center"
+                android:enabled="false"
+                />
+            <ProgressBar
+                android:id="@+id/addnewProduct_progress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cards_Activity">
+    <ProgressBar
+        android:id="@+id/cards_progress"
+        android:layout_width="25dp"
+        android:layout_height="27dp"
+        android:layout_centerInParent="true"
+
+        />
+<LinearLayout
+    android:id="@+id/noCard_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:visibility="gone"
+    >
+
+    <ImageView
+        android:layout_width="152dp"
+        android:layout_height="147dp"
+        android:src="@drawable/no_carts" />
+    <TextView
+        android:id="@+id/add_carts_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/add_carts_btn_backround"
+        android:gravity="center"
+        android:fontFamily="@font/zen_old_mincho"
+        android:text="@string/add_cards_text"
+        android:textColor="@color/white"
+        android:padding="7dp"
+        android:drawablePadding="7dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/add_to_carts"
+        android:textSize="15sp"
+
+        />
+</LinearLayout>
+
+<RelativeLayout
+
+    android:id="@+id/mycard_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+    <TextView
+        android:id="@+id/my_cards_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_card_text"
+        android:textSize="25sp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/arrow_left_btns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:padding="7dp"
+        android:src="@drawable/arrow_left" />
+
+
+
+
+</RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/carts_list"
+        android:layout_width="match_parent"
+        android:layout_height="612dp"
+        android:layout_below="@+id/mycard_toolbar"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bell_layout"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:layout_below="@+id/carts_list"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="520dp"
+        android:background="@drawable/white_input_text_backround_res"
+        android:elevation="20dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/bill_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/price_text"
+            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bill_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/dollar"
+            android:drawablePadding="3dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/delevry_serv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bill_price_text"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:text="@string/delevery_ser_txt"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/del_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bill_price"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:drawableRight="@drawable/dollar"
+            android:drawablePadding="3dp"
+            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/card_view"
+            android:layout_width="400dp"
+            android:layout_height="4dp"
+            android:layout_below="@+id/delevry_serv_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:minWidth="12dp"
+            android:minHeight="12dp" />
+
+
+        <TextView
+            android:id="@+id/total_bell_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:drawableRight="@drawable/dollar"
+            android:drawablePadding="3dp"            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total_bell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/total_txt"
+            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/continue_to_order"
+            android:layout_width="222dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/brow_btn_backround"
+            android:drawableLeft="@drawable/payment_white_icon"
+            android:text="@string/continue_to_payment_txt_res"
+            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

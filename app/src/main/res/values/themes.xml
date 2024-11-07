@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Store_application" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorOnPrimary">@color/brow</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimary">@color/brow</item>
+        <item name="colorSecondary">@color/brow</item>
+
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    </style>
+    <style name="Theme.Store_application" parent="Base.Theme.Store_application" >
+    </style>
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Customize the dialog style -->
+    </style>
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+
+        <item name="android:background">@color/transparont</item>
+
+    </style>
+
+  <style name="BottomSheetDialog" parent="Theme.Material3.Light.BottomSheetDialog">
+      <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+  </style>
+</resources>

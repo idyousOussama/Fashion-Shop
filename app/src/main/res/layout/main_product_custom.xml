@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+android:layout_marginTop="10dp"
+    android:elevation="5dp"
+    android:paddingBottom="5dp"
+    android:background="@drawable/custom_product_backround_res"
+    android:layout_gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/product_custom_img"
+        android:layout_width="200dp"
+        android:layout_height="230dp"
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/liked_Product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/like_gray_backround"
+        android:padding="10dp"
+        android:src="@drawable/empty_heart" />
+
+    <TextView
+        android:id="@+id/product_costom_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_custom_img"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+android:drawableRight="@drawable/dollar"
+        android:drawablePadding="3dp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/product_costom_name"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_costom_price"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/product_costom_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_custom_img"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/productheart"
+android:drawablePadding="2dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:textColor="@color/black"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        />
+
+
+
+</RelativeLayout>

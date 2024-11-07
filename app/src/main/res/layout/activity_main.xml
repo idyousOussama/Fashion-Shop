@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/user_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:layout_alignParentTop="true"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_pic"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/user_place_holder" />
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/user_pic"
+            android:text="@string/user_name"
+            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/user_pic"
+            android:text="@string/message_to_user"
+            android:fontFamily="@font/zen_old_mincho"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_bar_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+android:layout_centerHorizontal="true"
+        app:cardCornerRadius="25dp"
+        android:elevation="30dp"
+        android:layout_below="@+id/user_card"
+        >
+        <TextView
+            android:id="@+id/serach_bar"
+            android:layout_width="380dp"
+            android:layout_height="50dp"
+            android:background="@drawable/search_bar_backround"
+            android:hint="@string/searsh_any_res"
+            android:padding="5dp"
+            android:gravity="left|center"
+            android:textSize="18sp"
+            android:paddingStart="10dp"
+            android:maxLines="1"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/zen_old_mincho"
+
+            android:drawableLeft="@drawable/search_icon"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/bunner_container"
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/search_bar_card"
+android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        >
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </RelativeLayout>
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/bunner_dots_indecator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:selectedDotColor="@color/brow"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bunner_container"
+        app:dotsColor="@color/gry"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        app:dotsSize="7dp"
+        android:visibility="gone"
+        app:dotsSpacing="3dp" />
+
+<TextView
+    android:id="@+id/categories_txt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+android:text="@string/Categories_Text"
+    android:layout_below="@+id/bunner_dots_indecator"
+    android:layout_marginTop="7dp"
+    android:layout_marginStart="7dp"
+    android:fontFamily="@font/zen_old_mincho"
+    android:textSize="20dp"
+    android:textColor="@color/black"
+    />
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="150dp"
+     android:layout_below="@+id/categories_txt"
+android:id="@+id/categies_listLayout"
+     android:layout_marginTop="5dp" >
+     <ImageView
+         android:id="@+id/no_category_steker"
+         android:layout_width="100dp"
+         android:layout_height="100dp"
+         android:src="@drawable/list_search"
+         android:layout_centerInParent="true"
+         android:visibility="gone"
+         />
+     <ProgressBar
+         android:id="@+id/category_progress"
+         android:layout_width="33dp"
+         android:layout_height="33dp"
+         android:layout_centerInParent="true"/>
+     <TextView
+         android:id="@+id/all_text"
+         android:layout_width="82dp"
+         android:layout_height="31dp"
+         android:gravity="center"
+         android:text="@string/all_txt"
+         android:fontFamily="@font/zen_old_mincho"
+         android:textStyle="bold"
+         android:textColor="@color/brow"
+         android:textSize="20sp"
+         android:layout_centerVertical="true"
+         android:visibility="gone"
+         />
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/categories_List"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/all_text"
+         android:visibility="gone"
+       />
+ </RelativeLayout>
+    <TextView
+        android:id="@+id/product_categorie_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/All_Text"
+        android:layout_below="@+id/categies_listLayout"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/product_categorie_name"
+        android:gravity="center"
+        android:layout_above="@+id/main_navigation_bottom_container"
+        >
+
+        <ImageView
+            android:id="@+id/no_product_steker"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/list_search"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/product_List"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            />
+
+        <ProgressBar
+            android:id="@+id/product_progress"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/main_navigation_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="30dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/navigation_tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:weightSum="5">
+
+            <!-- First item with equal weight -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/svg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/zen_old_mincho"
+                    android:text="@string/home_text" />
+            </LinearLayout>
+
+            <!-- Second item with equal weight -->
+            <LinearLayout
+                android:id="@+id/card_Btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/card_svg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/zen_old_mincho"
+                    android:text="@string/cards_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/support_messanger"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="23dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/support_svg" />
+
+                    <ImageView
+                        android:id="@+id/main_newMessage"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="1dp"
+                        android:src="@drawable/red_dot"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/zen_old_mincho"
+                    android:text="@string/support_text" />
+            </LinearLayout>
+
+            <!-- Fourth item with equal weight -->
+            <LinearLayout
+                android:id="@+id/searh_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/search_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/zen_old_mincho"
+                    android:text="@string/search_text" />
+            </LinearLayout>
+
+            <!-- Fifth item with equal weight -->
+            <LinearLayout
+                android:id="@+id/more_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/more_svg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/zen_old_mincho"
+                    android:text="@string/more_text" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+

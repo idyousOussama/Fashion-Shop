@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottom_sheet_backround"
+    android:padding="7dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    >
+<TextView
+    android:id="@+id/account_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:text="@string/Accounts_Text"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    android:fontFamily="@font/zen_old_mincho"
+    android:textStyle="bold"
+    android:layout_marginTop="10dp"
+    android:gravity="center"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/account_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/account_text"
+        />
+
+    <TextView
+        android:id="@+id/add_newAccount_Btn"
+        android:layout_width="168dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:layout_below="@+id/account_list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sgin_in_brown_backround"
+        android:text="@string/add_Account_text"
+        android:gravity="center"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/create_newAccount_Btn"
+        android:layout_width="168dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/add_newAccount_Btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/create_new_account_backround"
+        android:text="@string/create_Account_text"
+        android:fontFamily="@font/zen_old_mincho"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginBottom="5dp"
+        />
+</RelativeLayout>

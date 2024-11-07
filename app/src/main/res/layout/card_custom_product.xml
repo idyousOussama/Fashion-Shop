@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/card_card"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_input_text_backround_res"
+    android:layout_margin="5dp"
+    android:elevation="5dp"
+
+    >
+
+    <ImageView
+        android:id="@+id/card_custom_img"
+        android:layout_width="94dp"
+        android:layout_height="80dp"
+        android:background="@drawable/white_input_text_backround_res"
+ />
+    <TextView
+        android:id="@+id/card_costom_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/card_custom_img"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/card_costom_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/card_custom_img"
+        android:layout_below="@+id/card_costom_name"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/zen_old_mincho"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+      />
+    <TextView
+        android:id="@+id/card_costom_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/card_custom_img"
+        android:layout_marginStart="10dp"
+        android:layout_alignBottom="@+id/card_custom_img"
+        android:fontFamily="@font/zen_old_mincho"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:text="100"
+        android:drawableRight="@drawable/dollar"
+        android:textSize="20sp"
+        android:drawablePadding="3dp"
+        android:textColor="@color/black"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+
+        android:layout_marginEnd="7dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/plus_card_bnt"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/brown_circule_btns"
+            android:padding="7dp"
+            android:src="@drawable/olus_black_icon" />
+      <TextView
+          android:id="@+id/cards_num_bar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/zen_old_mincho"
+          android:maxLength="4"
+          android:paddingEnd="5dp"
+          android:paddingStart="5dp"
+android:textStyle="bold"
+          android:textColor="@color/black"
+          android:layout_toLeftOf="@+id/plus_card_bnt"
+          android:layout_centerInParent="true"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/minus_card_bnt"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_toLeftOf="@+id/cards_num_bar"
+
+            android:background="@drawable/like_gray_backround"
+            android:padding="7dp"
+            android:src="@drawable/minus_black_icon" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

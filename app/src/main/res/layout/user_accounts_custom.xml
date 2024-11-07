@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="69dp"
+android:layout_marginTop="10dp"
+    android:background="@color/transparont"
+    android:padding="7dp"
+    >
+
+
+        <RelativeLayout
+            android:id="@+id/user_account_Image_layout"
+            android:layout_width="75dp"
+            android:layout_height="69dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_account_Image"
+                android:layout_width="75dp"
+                android:layout_height="69dp"
+                android:src="@drawable/user_place_holder" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/acount_active_dot"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/active_dot"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/user_account_name"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:maxLines="1"
+            android:fontFamily="@font/zen_old_mincho"
+
+            android:autoSizeTextType="uniform"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/user_account_Image_layout"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/active_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:text="@string/active_text" />
+    </RelativeLayout>
+

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buyer_Card_Activity">
+
+    <TextView
+        android:id="@+id/buyercard_text"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:gravity="center"
+        android:text="@string/buyer_card"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/buy_stiker"
+        android:layout_width="match_parent"
+        android:layout_height="303dp"
+        android:layout_below="@+id/buyercard_text"
+        android:src="@drawable/buye_steker" />
+    <TextView
+        android:id="@+id/buyerName_text"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buy_stiker"
+        android:layout_alignStart="@+id/buyerName_input"
+android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/user"
+        android:text="@string/buyer_name_txt_res"
+        android:fontFamily="@font/zen_old_mincho"
+        android:textColor="@color/black"
+        android:drawablePadding="8dp"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/buyerName_input"
+        android:layout_width="354dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/buyerName_text"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/white_input_text_backround_res"
+        android:hint="@string/buyer_name_hint"
+        android:inputType="text"
+        android:fontFamily="@font/zen_old_mincho"
+        android:layout_centerHorizontal="true"
+        android:maxLines="1"
+        android:padding="5dp" />
+    <TextView
+        android:id="@+id/buyer_name_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buyerName_input"
+        android:paddingStart="5dp"
+        android:visibility="gone"
+
+        android:layout_alignStart="@+id/buyerName_input"
+        android:textSize="12sp"
+        android:textColor="@color/red"
+        android:layout_marginTop="1dp"
+        />
+    <TextView
+        android:id="@+id/buyerEmail_text"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buyer_name_error"
+        android:layout_alignStart="@+id/buyerName_input"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/email"
+        android:fontFamily="@font/zen_old_mincho"
+        android:text="@string/buyer_email_txt_res"
+        android:textColor="@color/black"
+        android:drawablePadding="8dp"
+        android:textSize="15sp"
+
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/buyerEmail_input"
+        android:layout_width="354dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/buyerEmail_text"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/white_input_text_backround_res"
+        android:hint="@string/buyer_email_hint"
+        android:fontFamily="@font/zen_old_mincho"
+        android:inputType="text"
+        android:layout_centerHorizontal="true"
+        android:maxLines="1"
+        android:padding="5dp" />
+    <TextView
+        android:id="@+id/buyer_email_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buyerEmail_input"
+        android:paddingStart="5dp"
+        android:visibility="gone"
+        android:layout_alignStart="@+id/buyerName_input"
+        android:textSize="12sp"
+        android:textColor="@color/red"
+        android:layout_marginTop="1dp"
+        />
+
+    <TextView
+        android:id="@+id/buyerPhone_text"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buyer_email_error"
+        android:layout_alignStart="@+id/buyerName_input"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/phone"
+        android:text="@string/buyer_phone_txt_res"
+        android:fontFamily="@font/zen_old_mincho"
+        android:textColor="@color/black"
+        android:drawablePadding="8dp"
+        android:textSize="15sp"
+
+        android:textStyle="bold" />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="54dp"
+    android:layout_below="@+id/buyerPhone_text"
+android:id="@+id/countryNum"
+    android:layout_alignTop="@+id/buyerPhone_input"
+    android:layout_alignStart="@+id/buyerEmail_input"
+    >
+
+    <ImageView
+        android:id="@+id/maroc_flag"
+        android:layout_width="32dp"
+
+        android:layout_height="match_parent"
+        android:src="@drawable/maroc_flag"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+212 :"
+        android:fontFamily="@font/zen_old_mincho"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/maroc_flag"
+        />
+
+</RelativeLayout>
+
+    <EditText
+        android:id="@+id/buyerPhone_input"
+        android:layout_width="292dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/buyerPhone_text"
+        android:layout_marginTop="5dp"
+        android:maxLength="9"
+                android:layout_toRightOf="@+id/countryNum"
+        android:background="@drawable/white_input_text_backround_res"
+        android:hint="@string/buyer_phone_hint"
+        android:inputType="phone"
+        android:fontFamily="@font/zen_old_mincho"
+        android:maxLines="1"
+        android:layout_marginStart="2dp"
+        android:layout_alignEnd="@+id/buyerEmail_input"
+        android:padding="5dp" />
+    <TextView
+        android:id="@+id/buyer_phone_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buyerPhone_input"
+        android:paddingStart="5dp"
+        android:visibility="gone"
+        android:layout_alignStart="@+id/buyerPhone_input"
+        android:textSize="12sp"
+        android:textColor="@color/red"
+        android:layout_marginTop="1dp"
+        />
+
+
+    <Button
+        android:id="@+id/order_Btn"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:enabled="false"
+        android:fontFamily="@font/zen_old_mincho"
+        android:background="@drawable/disable_btns_backroud"
+        android:text="@string/order_btn_text" />
+
+    <ImageButton
+        android:id="@+id/buyer_card_goBack"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:background="@color/transparont"
+        android:src="@drawable/arrow_left"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="10dp"/>
+
+
+</RelativeLayout>

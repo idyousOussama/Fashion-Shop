@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp">
+
+<RelativeLayout
+    android:id="@+id/deldialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    >
+    <ImageButton
+        android:id="@+id/delete_item_dismess_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparont"
+        android:textColor="@color/red"
+        android:src="@drawable/cancel"
+android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+
+        android:layout_alignParentRight="true"
+
+        />
+
+    <TextView
+        android:id="@+id/delete_items_card_message"
+        android:layout_width="245dp"
+        android:layout_height="51dp"
+        android:layout_below="@+id/delete_item_dismess_dialog"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="5dp"
+        android:paddingStart="20dp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:text="@string/dele_item_dialog_text"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/delete_dialog_deleteBtn"
+        android:layout_width="85dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/delete_items_card_message"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/zen_old_mincho"
+        android:background="@color/transparont"
+        android:drawableLeft="@drawable/trash"
+        android:text="@string/delete_text"
+        android:textColor="@color/red"/>
+
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/deleting_Progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+
+        >
+
+        <ProgressBar
+            android:id="@+id/deleting_Progress"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deleting_text"
+            android:fontFamily="@font/zen_old_mincho"
+            android:layout_centerVertical="true"
+android:layout_toRightOf="@+id/deleting_Progress"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            />
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView >
